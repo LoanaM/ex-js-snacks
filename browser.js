@@ -1,15 +1,13 @@
 browser = {
-  "Tab" : ["Fb", "Github", "Hotmail", "Twitter", "Gmail"],
+  "Tab" : ["Fb", "Instagram", "Github", "Hotmail", "Twitter", "Gmail"],
   "Activetab" : 0,
 }
-var social = ["Fb", "Twitter"];
+var social = ["Fb", "Twitter", "Instagram"];
 
 for (var i = 0; i < browser.Tab.length; i++) {
   if (social.includes(browser.Tab[i])) {
-    if (browser.Activetab==i) {
-      browser.Activetab++
-    }
     remove (browser.Tab,browser.Tab[i])
+    i--
   }
 }
 
@@ -20,3 +18,6 @@ console.log (browser.Activetab)
 function remove (array,el) {
    array.splice(array.indexOf(el), 1);
 };
+
+// if (browser.Activetab==i) {
+//   browser.Activetab++
