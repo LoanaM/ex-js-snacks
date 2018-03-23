@@ -10,7 +10,10 @@ console.log (casualArray)
 var guessArray = [];
 
 var countdown = window.setInterval (timer, 1000);
-count = 5;
+
+count = 30;
+risultato = 0;
+console.log (guessArray);
 
 function timer () {
   console.log (count)
@@ -23,14 +26,12 @@ function timer () {
     }
   }
 }
-risultato = 0;
-
-//perché non funziona???
-for (var j = 0; j < casualArray.length; j++) {
-  if (casualArray.includes(guessArray[j])) {
-    risultato++
+//parte solo a richiesta dell'utente con onclick-button
+function punteggio () {
+  for (var j = 0; j < casualArray.length; j++) {
+    if (casualArray.includes(guessArray[j])) {
+      risultato++
+    }
   }
-}
-
   document.write (risultato);
-console.log (guessArray);
+}
