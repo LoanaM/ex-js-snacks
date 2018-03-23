@@ -25,6 +25,7 @@ function timer () {
 }
 risultato = 0;
 
+//perché non funziona???
 for (var j = 0; j < casualArray.length; j++) {
   if (casualArray.includes(guessArray[j])) {
     risultato++
