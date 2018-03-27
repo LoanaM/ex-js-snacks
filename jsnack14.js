@@ -24,6 +24,7 @@ function timer () {
       guess = parseInt(prompt ("Indovina un numero"));
       guessArray.push(guess)
     }
+    punteggio()
   }
 }
 //parte solo a richiesta dell'utente con onclick-button
@@ -33,5 +34,5 @@ function punteggio () {
       risultato++
     }
   }
-  document.write (risultato);
+  document.write ("Il tuo punteggio è: " + risultato);
 }
